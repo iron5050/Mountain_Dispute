@@ -12,6 +12,7 @@ public class conversationStarter : MonoBehaviour
     //E promt game object
     public GameObject PromtObject;
 
+    public GameObject ConvoZone;
 
     private void OnTriggerStay(Collider other)
     {
@@ -29,10 +30,13 @@ public class conversationStarter : MonoBehaviour
                     //hide E promt
                     //EPromtCanvas.enabled = false;
                     PromtObject.SetActive(false);
+                   
 
                     //this makes the conversastion manager START conversastion the was put into the serialized field "myconversastion"
                     ConversationManager.Instance.StartConversation(MyConversastion);
                     willingToTalk = false;
+
+                    Destroy(ConvoZone);
                 }
             }
         }
