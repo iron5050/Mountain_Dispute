@@ -14,6 +14,7 @@ public class IntroConvoBegin : MonoBehaviour
 
     public void Quitgame()
     {
+        Debug.Log("Game Quit");
         Application.Quit();
     }
 }
